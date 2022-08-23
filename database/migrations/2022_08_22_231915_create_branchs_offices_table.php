@@ -13,7 +13,7 @@ class CreateBranchsOfficesTable extends Migration
      */
     public function up()
     {
-        Schema::create('branchs_offices', function (Blueprint $table) {
+        Schema::create('branches_offices', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('label', 45);
             $table->string('google_link')->comment('Google Map');
@@ -30,6 +30,6 @@ class CreateBranchsOfficesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('branchs_offices');
+        Schema::dropIfExists('branches_offices');
     }
 }

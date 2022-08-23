@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVersionsTable extends Migration
+class CreateCapacitationsVersionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateVersionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('versions', function (Blueprint $table) {
+        Schema::create('capacitations_versions', function (Blueprint $table) {
             $table->integer('id', true);
             $table->timestamp('start_date')->useCurrent();
             $table->timestamp('end_date')->nullable();
@@ -33,6 +33,6 @@ class CreateVersionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('versions');
+        Schema::dropIfExists('capacitations_versions');
     }
 }

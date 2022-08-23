@@ -14,7 +14,7 @@ class AddForeignKeysToParticipantsTable extends Migration
     public function up()
     {
         Schema::table('participants', function (Blueprint $table) {
-            $table->foreign(['location_id'], 'location_id')->references(['id'])->on('branchs_offices');
+            $table->foreign(['location_id'], 'location_id')->references(['id'])->on('branches_offices');
         });
     }
 
